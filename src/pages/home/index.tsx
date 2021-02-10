@@ -1,6 +1,7 @@
 import React, { useCallback, FormEvent, useRef, useState } from 'react'
 import faker from 'faker'
 import { Container } from './styles'
+import Button from '../../components/button'
 
 const Home: React.FC = () => {
     const formRef = useRef(null)
@@ -73,9 +74,7 @@ const Home: React.FC = () => {
             )}
 
             {(!!jsonOutput.length && !showTextarea) && (
-                <button type="button">
-                    <a href={`data:text/json;charset=utf-8, ${encodeURIComponent(JSON.stringify(jsonOutput, null, '\t'))}`} download="file.json">Download .JSON</a>
-                </button>
+                <Button data={jsonOutput}>Download .JSON</Button>
             )}                
 
             {!!jsonOutput.length && (
