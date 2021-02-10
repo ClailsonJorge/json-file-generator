@@ -6,6 +6,7 @@ import Button from '../../components/button'
 
 const Home: React.FC = () => {
     const formRef = useRef(null)
+    
     const [quantidade, setQuantidade] = useState(0)
     const [jsonOutput, setJsonOutput] = useState<Object[]>([])
     const [showTextarea, setShowTextarea] = useState(false)
