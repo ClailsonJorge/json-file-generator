@@ -66,9 +66,8 @@ const Home: React.FC = () => {
         <Container>
             {!showTextarea && (
                 <form method="get" ref={formRef} onSubmit={handleSubmt}>
-                    <label htmlFor="">Quantidade
-                        <input name="quantidade" type="number" min="0" max="100" value={quantidade} onChange={handleChangeQuantidade}/>
-                    </label>
+                    <label htmlFor="">Quantidades de pessoas</label>
+                    <input name="quantidade" type="number" min="0" max="100" value={quantidade} onChange={handleChangeQuantidade}/>
                     <button type="submit">Selecionar</button>
                 </form>
             )}
